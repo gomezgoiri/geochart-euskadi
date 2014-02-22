@@ -19,7 +19,7 @@ Implemented features:
 
 <img src="http://i.imgur.com/JBJqBl5l.png" title="Municipality resolution"/>
 
-<img src="http://i.imgur.com/gcbK3l.png" title="Comarcas resolution with labels"/>
+<img src="http://i.imgur.com/bk3Pac7l.png" title="Comarcas resolution with labels"/>
 
 
 Image sources
