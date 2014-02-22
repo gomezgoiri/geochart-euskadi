@@ -3,7 +3,7 @@ geochart-euskadi
 
 Javascript geochart maker for the [Basque Country](http://en.wikipedia.org/wiki/Basque_Country_(autonomous_community)).
 
-The API is intended to be similar to [GCharts-like](https://developers.google.com/chart/interactive/docs/gallery/geochart).
+The API is intended to be as similar to [GCharts' one](https://developers.google.com/chart/interactive/docs/gallery/geochart) as possible.
 Comparing to GCharts, this project shows more fine-grained information about this region.
 Who knows if they will add it in the future or not, but in the meantime we have this.
 
