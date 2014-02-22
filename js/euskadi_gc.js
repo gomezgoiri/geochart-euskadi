@@ -94,4 +94,6 @@ function getProportionalColor(current, range, minColor, maxColor) {
 
 function updateLegend(data) {
     var range = data.getColumnRange(1);
+    $("#mapMinValue").children().html(range.min);
+    $("#mapMaxValue").children().html(range.max);
 }
