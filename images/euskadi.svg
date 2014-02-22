@@ -42,6 +42,22 @@
      borderlayer="true" />
   <title
      id="title7709">Municipios Comunidad Autonoma Vasca</title>
+  <defs id="defs">
+    <pattern patternUnits="userSpaceOnUse" x="0" y="0" width="4" height="4" viewBox="0 0 4 4" id="_ABSTRACT_RENDERER_ID_0">
+      <rect x="0" y="0" width="4" height="4" fill="#cccccc"></rect>
+      <g stroke="#f5f5f5" stroke-linecap="square">
+	<line x1="2" y1="0" x2="4" y2="2" stroke-width="2"></line>
+	<line x1="0" y1="2" x2="2" y2="4" stroke-width="2"></line>
+      </g>
+    </pattern>
+    <clipPath id="_ABSTRACT_RENDERER_ID_1">
+      <rect x="46" y="0" width="809" height="500"></rect>
+    </clipPath>
+    <linearGradient id="_ABSTRACT_RENDERER_ID_2" x1="38.50103736548411" y1="465" x2="275.4989626345159" y2="465" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#efe6dc;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#109618;stop-opacity:1"></stop>
+    </linearGradient>
+  </defs>
   <metadata
      id="metadata476">
     <rdf:RDF>
@@ -22691,5 +22707,16 @@
          id="tspan8706"
          x="596.23724"
          y="614.80096">Araba</tspan></text>
+  </g>
+  <g>
+    <rect x="38.50103736548411" y="972.93" width="236.9979252690318" height="13.07" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_2)"></rect>
+    <g>
+      <text text-anchor="start" x="7" y="983.9" font-family="Arial" font-size="14" stroke="#ffffff" stroke-width="3" fill="#000000">200</text>
+      <text text-anchor="start" x="7" y="983.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#000000">200</text>
+    </g>
+    <g>
+      <text text-anchor="start" x="283" y="983.9" font-family="Arial" font-size="14" stroke="#ffffff" stroke-width="3" fill="#000000">700</text>
+      <text text-anchor="start" x="283" y="983.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#000000">700</text>
+    </g>
   </g>
 </svg>
