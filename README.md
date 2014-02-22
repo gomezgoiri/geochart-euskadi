@@ -3,14 +3,23 @@ geochart-euskadi
 
 Javascript geochart maker for the [Basque Country](http://en.wikipedia.org/wiki/Basque_Country_(autonomous_community)).
 
-The API is intended to be similar to [GChart-like](https://developers.google.com/chart/interactive/docs/gallery/geochart).
-This project can be seen as an extension of Google Chart to show a more fine-grained information about this region.
-This functionality is not currently available on Google Chart, but who knows if they will add it in the future or not.
+The API is intended to be similar to [GCharts-like](https://developers.google.com/chart/interactive/docs/gallery/geochart).
+Comparing to GCharts, this project shows more fine-grained information about this region.
+Who knows if they will add it in the future or not, but in the meantime we have this.
+
+
+Implemented features:
+ * Available resolutions of the map: [municipalities](http://en.wikipedia.org/wiki/Municipality), [comarcas](http://en.wikipedia.org/wiki/Comarca) and [province](http://en.wikipedia.org/wiki/Province).
+ * Show labels or not.
+ * Shadowing areas according to a [color gradient](http://en.wikipedia.org/wiki/Color_gradient) depending on their values.
+ * Tooltips with additional information about the different areas.
+
 
 <a href="http://imgur.com/a/gcbK3"><img src="http://i.imgur.com/WDYMoKil.png" title="Province resolution"/></a>
 
 <img src="http://i.imgur.com/JBJqBl5l.png" title="Municipality resolution"/>
 
+<img src="http://i.imgur.com/gcbK3l.png" title="Comarcas resolution with labels"/>
 
 
 Image sources
