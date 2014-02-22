@@ -27,35 +27,82 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="956"
-     inkscape:window-height="1018"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
      id="namedview472"
      showgrid="false"
      units="cm"
-     inkscape:zoom="0.4159418"
-     inkscape:cx="841.66268"
-     inkscape:cy="698.01614"
-     inkscape:window-x="2238"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="g4260"
+     inkscape:zoom="1.6637672"
+     inkscape:cx="616.01297"
+     inkscape:cy="499.50588"
+     inkscape:window-x="1364"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="poblaciones"
      borderlayer="true" />
   <title
      id="title7709">Municipios Comunidad Autonoma Vasca</title>
-  <defs id="defs">
-    <pattern patternUnits="userSpaceOnUse" x="0" y="0" width="4" height="4" viewBox="0 0 4 4" id="_ABSTRACT_RENDERER_ID_0">
-      <rect x="0" y="0" width="4" height="4" fill="#cccccc"></rect>
-      <g stroke="#f5f5f5" stroke-linecap="square">
-	<line x1="2" y1="0" x2="4" y2="2" stroke-width="2"></line>
-	<line x1="0" y1="2" x2="2" y2="4" stroke-width="2"></line>
+  <defs
+     id="defs">
+    <pattern
+       patternUnits="userSpaceOnUse"
+       x="0"
+       y="0"
+       width="4"
+       height="4"
+       viewBox="0 0 4 4"
+       id="_ABSTRACT_RENDERER_ID_0">
+      <rect
+         x="0"
+         y="0"
+         width="4"
+         height="4"
+         fill="#cccccc"
+         id="rect7" />
+      <g
+         stroke="#f5f5f5"
+         stroke-linecap="square"
+         id="g9">
+        <line
+           x1="2"
+           y1="0"
+           x2="4"
+           y2="2"
+           stroke-width="2"
+           id="line11" />
+        <line
+           x1="0"
+           y1="2"
+           x2="2"
+           y2="4"
+           stroke-width="2"
+           id="line13" />
       </g>
     </pattern>
-    <clipPath id="_ABSTRACT_RENDERER_ID_1">
-      <rect x="46" y="0" width="809" height="500"></rect>
+    <clipPath
+       id="_ABSTRACT_RENDERER_ID_1">
+      <rect
+         x="46"
+         y="0"
+         width="809"
+         height="500"
+         id="rect16" />
     </clipPath>
-    <linearGradient id="_ABSTRACT_RENDERER_ID_2" x1="38.50103736548411" y1="465" x2="275.4989626345159" y2="465" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" style="stop-color:#efe6dc;stop-opacity:1"></stop>
-      <stop offset="100%" style="stop-color:#109618;stop-opacity:1"></stop>
+    <linearGradient
+       id="_ABSTRACT_RENDERER_ID_2"
+       x1="38.50103736548411"
+       y1="465"
+       x2="275.4989626345159"
+       y2="465"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#efe6dc;stop-opacity:1"
+         id="stop19" />
+      <stop
+         offset="100%"
+         style="stop-color:#109618;stop-opacity:1"
+         id="stop21" />
     </linearGradient>
   </defs>
   <metadata
@@ -17883,7 +17930,7 @@
        style="fill:#f2f2f2;stroke:#000000;stroke-width:0.17678152;stroke-miterlimit:6.78195143;stroke-opacity:1;stroke-dasharray:none;display:inline"
        transform="matrix(2.0129988,0,0,1.9957235,-144.31072,234.73688)" />
     <path
-       id="path88-5"
+       id="vitoria-gasteiz"
        d="m 378.95126,165.85139 1.19998,1.4401 6.47985,3.84026 0.71998,-0.24001 0,-1.68012 0.95998,0.96007 5.03988,0.96006 1.91996,2.40017 1.43996,0.24002 0.95998,0.96006 4.5599,0.96007 2.39994,-0.48004 3.83991,1.20009 0,0.96006 0,-1.20008 0.95998,0.24002 1.67996,-2.64018 5.27988,-0.24002 2.63994,-3.36023 -0.24,-1.68012 4.07991,-5.28036 1.91996,1.4401 0,-0.96007 2.15995,-1.4401 0.23999,2.40017 2.39995,0.96007 0.47998,0.72004 5.51988,0.24002 1.19997,-2.40016 0,-1.92014 1.91996,-2.40016 0.71998,6.00041 1.91995,1.68012 -2.63993,5.76039 -2.63994,0.48004 -1.19998,1.44009 -0.95997,2.40017 0,3.12021 -0.71999,-0.72005 -2.39994,2.16015 0,0.48004 1.43996,0.96006 -0.47998,6.24043 2.39994,5.52038 -0.47999,2.8802 2.15995,-0.72005 4.79989,0.96006 3.59992,-0.96006 1.91995,-2.8802 -1.67996,-0.48003 1.43997,-1.68012 1.43997,-4.08028 -2.63994,-3.36023 0.23999,-3.12021 -0.95998,-2.16015 2.63994,-2.16015 0.95998,-3.84026 1.67996,-0.48004 0.95998,-1.4401 5.27988,2.64019 0,3.36023 6.71984,2.88019 0.24,3.60025 -1.43997,1.20008 -2.39994,3.36023 -0.95998,2.40017 -1.43997,0.48003 -2.15995,-0.48003 0.24,2.8802 0.71998,1.20008 1.67996,-1.20008 4.07991,2.16015 2.87993,-1.92014 5.27988,5.7604 -0.71999,2.40016 -2.15995,0.24002 -2.87993,3.12022 -0.47999,2.88019 0.95998,3.12022 -2.15995,3.84026 -0.47999,4.80033 -1.91996,-0.96007 -0.23999,1.4401 0.95998,1.20009 -1.91996,5.04034 3.83991,9.84068 -1.43996,0.48003 -0.71999,-0.72005 -1.43996,0.96007 -2.87994,-1.20008 -1.19997,0.24001 -1.43997,2.16015 -2.39994,0.48003 -2.63994,4.3203 -2.63994,0 -1.91995,1.20008 -1.19998,-1.20008 -1.19997,0.72005 -1.19997,-0.72005 -3.11993,2.64018 -0.95998,0.24002 -1.91995,-0.72005 -1.19998,0.96006 -0.71998,-1.20008 -2.39994,-0.24001 -0.47999,-2.40017 -5.27988,-1.20008 -0.24,1.20008 -4.0799,-3.84026 -5.51987,0.48003 -0.47999,-1.4401 -2.63994,-1.20008 -3.11993,0.24001 -3.11993,-2.40016 -3.35992,-1.4401 -1.43997,-1.4401 -4.3199,1.20008 -5.51987,-0.96006 -3.35992,0.72005 -2.15995,-0.72005 -2.15995,0.48003 -0.24,-3.36023 -4.3199,-4.56031 1.19997,-5.28037 2.15995,-0.48003 4.07991,1.20008 3.35992,-0.48003 -1.91995,-5.76039 0.95997,-3.12022 0,-5.52038 -0.71998,0.24002 -0.71998,-1.20008 0.47999,-0.24002 -10.07977,-4.3203 -7.43983,0.72005 -7.91982,-4.32029 -2.87993,1.44009 -1.67996,-0.24001 0,-1.68012 -2.63994,-2.64018 1.19997,-1.20008 -0.95998,-2.16015 0.24,-3.36023 1.43997,-3.60025 4.0799,-3.60024 1.91996,-3.12022 -0.47999,-1.20008 1.91995,-2.64018 7.91982,0.48003 0.24,-1.4401 4.3199,-0.48003 3.59991,-5.04035 z"
        clip-path="url(#SVG_CP_1-2-3-1-9-6)"
        inkscape:connector-curvature="0"
@@ -22708,15 +22755,62 @@
          x="596.23724"
          y="614.80096">Araba</tspan></text>
   </g>
-  <g>
-    <rect x="38.50103736548411" y="972.93" width="236.9979252690318" height="13.07" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_2)"></rect>
-    <g id="mapMinValue">
-      <text text-anchor="start" x="7" y="983.9" font-family="Arial" font-size="14" stroke="#ffffff" stroke-width="3" fill="#000000">200</text>
-      <text text-anchor="start" x="7" y="983.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#000000">200</text>
+  <g
+     id="g5551">
+    <rect
+       x="38.50103736548411"
+       y="972.93"
+       width="236.9979252690318"
+       height="13.07"
+       stroke="none"
+       stroke-width="0"
+       fill="url(#_ABSTRACT_RENDERER_ID_2)"
+       id="rect5553" />
+    <g
+       id="mapMinValue">
+      <text
+         text-anchor="start"
+         x="7"
+         y="983.9"
+         font-family="Arial"
+         font-size="14"
+         stroke="#ffffff"
+         stroke-width="3"
+         fill="#000000"
+         id="text5556">200</text>
+      <text
+         text-anchor="start"
+         x="7"
+         y="983.9"
+         font-family="Arial"
+         font-size="14"
+         stroke="none"
+         stroke-width="0"
+         fill="#000000"
+         id="text5558">200</text>
     </g>
-    <g id="mapMaxValue">
-      <text text-anchor="start" x="283" y="983.9" font-family="Arial" font-size="14" stroke="#ffffff" stroke-width="3" fill="#000000">700</text>
-      <text text-anchor="start" x="283" y="983.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#000000">700</text>
+    <g
+       id="mapMaxValue">
+      <text
+         text-anchor="start"
+         x="283"
+         y="983.9"
+         font-family="Arial"
+         font-size="14"
+         stroke="#ffffff"
+         stroke-width="3"
+         fill="#000000"
+         id="text5561">700</text>
+      <text
+         text-anchor="start"
+         x="283"
+         y="983.9"
+         font-family="Arial"
+         font-size="14"
+         stroke="none"
+         stroke-width="0"
+         fill="#000000"
+         id="text5563">700</text>
     </g>
   </g>
 </svg>

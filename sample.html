@@ -10,8 +10,7 @@
     <script type='text/javascript'>
       google.load('visualization', '1');
       google.setOnLoadCallback(drawRegionsMap);
-    
-      //$(document).ready(function(){
+      
       function drawRegionsMap() {
 	  $("#svgmap").html("<p>Loading content...</p>");
 
@@ -20,6 +19,11 @@
 	      ['Bizkaia', 1155241, 521.32],
 	      ['Gipuzkoa', 714360, 374.21],
 	      ['Araba', 321417, 105.82]
+	      /* To check an example for municipalities:
+	      ['Municipality', 'Population', 'Density'],
+	      ['Bilbao', 349356, 8594.24],
+	      ['Donostia', 186500, 3062.9],
+	      ['Vitoria-Gasteiz', 241386, 872.03]*/
 	  ]);
 	  
 	  var options = {
@@ -33,14 +37,12 @@
 	  };
 	  
 	  loadMap(data, options);
-      }//);
+      }
     </script>
     
     <style></style>
   </head>
   <body>
   <div id="svgmap" />
-  <!--<object data="images/euskadi.svg" id="svgembed"></object>-->
-  <!--<img src="images/euskadi.svg" />-->
   </body>
 </html>
