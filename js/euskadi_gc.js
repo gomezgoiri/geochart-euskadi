@@ -1,14 +1,26 @@
 function loadMap(data, options) {
     $.get("images/euskadi.svg", {}, function(img) {
-	console.log('about to show the svg');
+	console.log("about to show the svg");
 	$("#svgmap").html(img);
+	
+	var minColor = "#efe6dc";
+	var maxColor = "#109618";
+	if ("colorAxis" in options && "colors" in options.colorAxis) {
+	  console.log(options.colorAxis.colors)
+	  if(options.colorAxis.colors instanceof Array && options.colorAxis.colors.length==2) {
+	    minColor = options.colorAxis.colors[0];
+	    maxColor = options.colorAxis.colors[1];
+	  } else {
+	    console.log("'colorAxis.colors' must be an array composed by two strings expressing hexadecimal colors (e.g. #cccccc).");
+	  }
+	}
 	
 	var rowInds = data.getSortedRows([{column: 1}]);
 	for (var i = 0; i < rowInds.length; i++) {
 	  createTooltip(data, rowInds[i]);
-	  setBackgroundColors(data, rowInds[i]);
+	  setBackgroundColors(data, rowInds[i], minColor, maxColor);
 	}
-	updateLegend(data);
+	updateLegend(data, minColor, maxColor);
 	
 	var show_id = "#";
 	if(options.resolution=="municipality") {
@@ -63,17 +75,18 @@ function getTooltipText(data, rowNumber) {
     return ret;
 }
 
-function setBackgroundColors(data, rowNumber) {
-    //$("#bilbao").css("fill","#ff3333");
-    var col = "#" + getProportionalRGBs( data.getValue(rowNumber, 1), data.getColumnRange(1), "#efe6dc" , "#109618" );
+function setBackgroundColors(data, rowNumber, minColor, maxColor) {
+    var col = "#" + getProportionalRGBs( data.getValue(rowNumber, 1), data.getColumnRange(1), minColor , maxColor );
     var idreg = getElementId(data, rowNumber);
-    $(idreg).css("fill", col);
+    $(idreg).css("fill", col); // e.g.: $("#bilbao").css("fill","#ff3333");
 }
 
 function getProportionalRGBs(current, range, minColor, maxColor) {
     var r = getProportionalColor(current, range, minColor.substring(1,3), maxColor.substring(1,3));
     var g = getProportionalColor(current, range, minColor.substring(3,5), maxColor.substring(3,5));
     var b = getProportionalColor(current, range, minColor.substring(5,7), maxColor.substring(5,7));
+    console.log(r + g + b);
+    console.log(r + " " + g + " " + b);
     return r + g + b;
 }
 
@@ -81,18 +94,23 @@ function d2h(d) {
     return (+d).toString(16).toUpperCase();
 }
 
-function getProportionalColor(current, range, minColor, maxColor) {
+function getProportionalColor(current, range, minColorSlide, maxColorSlide) {
     // avoid "#"s and convert to decimals
-    var decMinCol = parseInt(minColor, 16); 
-    var decMaxCol = parseInt(maxColor, 16);
+    var decMinCol = parseInt(minColorSlide, 16); 
+    var decMaxCol = parseInt(maxColorSlide, 16);
     
     var decCol = ( (current-range.min) * (decMaxCol - decMinCol) / (range.max - range.min) ) + decMinCol;
     //JavaScript only has a Number type
     //If you want to format the number as a string with two digits after the decimal point use:
-    return  d2h(decCol.toFixed(0));
+    var hexResult = d2h(decCol.toFixed(0)); // toFixed(0) => to string with no decimals
+    return (decCol>16)? hexResult: "0" + hexResult; // add a 0 to ensure that we use 2 chacters always
 }
 
-function updateLegend(data) {
+function updateLegend(data, minColor, maxColor) {
+    // Customize colors
+    // TODO minColor, maxColor
+    
+    // Update values
     var range = data.getColumnRange(1);
     $("#mapMinValue").children().html(range.min);
     $("#mapMaxValue").children().html(range.max);
