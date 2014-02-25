@@ -12,6 +12,7 @@ Implemented features:
  * Available resolutions of the map: [municipalities](http://en.wikipedia.org/wiki/Municipality), [comarcas](http://en.wikipedia.org/wiki/Comarca) and [province](http://en.wikipedia.org/wiki/Province).
  * Show labels or not.
  * Shadowing areas according to a [color gradient](http://en.wikipedia.org/wiki/Color_gradient) depending on their values.
+ * Customizable color gradient.
  * Tooltips with additional information about the different areas.
 
 

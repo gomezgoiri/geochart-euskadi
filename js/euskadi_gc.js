@@ -108,7 +108,8 @@ function getProportionalColor(current, range, minColorSlide, maxColorSlide) {
 
 function updateLegend(data, minColor, maxColor) {
     // Customize colors
-    // TODO minColor, maxColor
+    $("#stop19").css("stop-color", minColor);
+    $("#stop21").css("stop-color", maxColor);
     
     // Update values
     var range = data.getColumnRange(1);
