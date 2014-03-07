@@ -2,16 +2,17 @@ function loadMap(data, options) {
     // TODO try using load() to avoid requiring any webserver to load the map
     //   [ref] http://jsfiddle.net/davidbuzatto/zuFsc/
     $.get("images/euskadi.svg", {}, function(img) {
+	// Needed because the changes are not made effective when the "img" is directly changed.
+        //  [ref] http://richardmiller.co.uk/2011/03/04/jquery-manipulating-ajax-response-before-inserting-into-the-dom/
 	var modImg = $(img);
 	
-	// No matter which layers are visible in the current SVG version, we force all the optional layers to hide
-	// Warning: We could simply declare this attribute for the "initially_hidden" class, but the inline "style" declarations would override its default behavior.
+	// No matter which layers are visible in the current SVG version, we force all the optional layers to hide.
+	// NOTE: We could simply declare this attribute for the "initially_hidden" class, but the inline "style" declarations would override its default behavior.
 	// Since inkscape manages layers' visibility or invisibility with a "style" attribute, we make sure that the invisibility is applied afterwards.
 	$(".initially_hidden", modImg).css("display", "none");
 	
-	console.log("about to show the svg");
-	$("#svgmap").html(modImg); // TODO It would be better to insert it when all the changes have been made
-				// To do this, we would need to directly modify "img" instead of accessing to $("#elementId")
+	
+
 	
 	var minColor = "#efe6dc";
 	var maxColor = "#109618";
@@ -26,11 +27,12 @@ function loadMap(data, options) {
 	}
 	
 	var rowInds = data.getSortedRows([{column: 1}]);
+	var tooltipText = $("<div id=\"tooltipContents\" style=\"display:none\"></div>");
 	for (var i = 0; i < rowInds.length; i++) {
-	  createTooltip(data, rowInds[i]);
-	  setBackgroundColors(data, rowInds[i], minColor, maxColor);
+	  createTooltip(modImg, tooltipText, data, rowInds[i]);
+	  setBackgroundColors(modImg, data, rowInds[i], minColor, maxColor);
 	}
-	updateLegend(data, minColor, maxColor);
+	updateLegend(modImg, data, minColor, maxColor);
 	
 	var show_id = "#";
 	if(options.resolution=="municipality") {
@@ -41,12 +43,21 @@ function loadMap(data, options) {
 	  show_id += "provincias";
 	}
 	
-	$(show_id).css("display","block");
+	$(show_id, modImg).css("display","block");
 	//$(show_id).css("visibility","visible");
 	if(options.labels) {
-	  $(show_id+"_labels").css("display","block"); // or (inkscape changes to this) inline
+	  $(show_id+"_labels", modImg).css("display","block"); // or (inkscape changes to this) inline
 	  //$(show_id+"_labels").css("visibility","visible"); // or "hidden"
 	}
+	
+	// We only insert the image after modifying it.
+	// In practice, the user will hardly appreciate the difference between inserting the image before making the changes and this, but just in case...
+	console.log("about to show the svg");
+	$("#svgmap").html(modImg);
+	// NOTE: "tooltipText" does not even need to be inserted in the DOM
+	//          Actually, no extra DIVs are needed to show the tooltips.
+	//          Anyway I've done this way (i.e. insert the messages shown in the tooltips in the DOM) because I find it more clear and debuggable for the web developer.
+	$("#svgmap").append(tooltipText);
     },"text");
 }
 
@@ -54,25 +65,22 @@ function getElementId(data, rowNumber) {
   return "#" + data.getValue(rowNumber, 0).toLowerCase();
 }
 
-function createTooltip(data, rowNumber) {
+function createTooltip(mapContext, ttTextContext, data, rowNumber) {
     var idreg = getElementId(data, rowNumber);
-    createTooltipText( idreg.substring(1), data, rowNumber );
+    createTooltipText( ttTextContext, idreg.substring(1), data, rowNumber );
     
-    $(idreg).attr("title", idreg.substring(1)); // Needed for tooltip
-    $(idreg).tooltip({
+    $(idreg, mapContext).attr("title", idreg.substring(1)); // Needed for tooltip
+    $(idreg, mapContext).tooltip({
 	content:  function() {
-		      var currentId = $(this).attr("id");
-		      return $("#" + currentId+"_content").html();
+		      var currentId = $(this, mapContext).attr("id");
+		      return $("#" + currentId+"_content", ttTextContext).html();
 		  },
 	track: true
     });
 }
 
-function createTooltipText(forId, data, rowNumber) {
-    if( $("#tooltipContents").length<=0 ) { // not exist
-	$("#svgmap").append("<div id=\"tooltipContents\" style=\"display:none\"></div>");
-    }
-    $("#tooltipContents").append("<div id=\"" + forId + "_content\">" + getTooltipText(data, rowNumber) + "</div>");
+function createTooltipText(context, forId, data, rowNumber) {
+    $(context).append("<div id=\"" + forId + "_content\">" + getTooltipText(data, rowNumber) + "</div>");
 }
 
 function getTooltipText(data, rowNumber) {
@@ -85,10 +93,10 @@ function getTooltipText(data, rowNumber) {
     return ret;
 }
 
-function setBackgroundColors(data, rowNumber, minColor, maxColor) {
+function setBackgroundColors(context, data, rowNumber, minColor, maxColor) {
     var col = "#" + getProportionalRGBs( data.getValue(rowNumber, 1), data.getColumnRange(1), minColor , maxColor );
     var idreg = getElementId(data, rowNumber);
-    $(idreg).css("fill", col); // e.g.: $("#bilbao").css("fill","#ff3333");
+    $(idreg, context).css("fill", col); // e.g.: $("#bilbao").css("fill","#ff3333");
 }
 
 function getProportionalRGBs(current, range, minColor, maxColor) {
@@ -116,13 +124,13 @@ function getProportionalColor(current, range, minColorSlide, maxColorSlide) {
     return (decCol.toFixed(0)>=16)? hexResult: "0" + hexResult; // add a 0 to ensure that we use 2 chacters always
 }
 
-function updateLegend(data, minColor, maxColor) {
+function updateLegend(context, data, minColor, maxColor) {
     // Customize colors
-    $("#stop19").css("stop-color", minColor);
-    $("#stop21").css("stop-color", maxColor);
+    $("#stop19", context).css("stop-color", minColor);
+    $("#stop21", context).css("stop-color", maxColor);
     
     // Update values
     var range = data.getColumnRange(1);
-    $("#mapMinValue").children().html(range.min);
-    $("#mapMaxValue").children().html(range.max);
+    $("#mapMinValue", context).children().html(range.min);
+    $("#mapMaxValue", context).children().html(range.max);
 }
