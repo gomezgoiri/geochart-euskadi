@@ -16,7 +16,7 @@ If you want to quickly check it and you have a GNU/Linux with Python installed, 
 
     bash runserver.sh
 
-Then, simply __load__ "sample.html" __in your browser__ (if you have executed _runserver.sh_, go to http://localhost:8000/sample.html).
+Then, simply __load__ _sample.html_ __in your browser__ (if you have executed _runserver.sh_, go to <http://localhost:8000/sample.html>).
 You can also customize the example according to your needs __editing__ the _drawRegionsMap_ function in _sample.html_ and refreshing the browser.
 
 Finally, if you want to use it in you own web project, just call to the library as done in the example.
