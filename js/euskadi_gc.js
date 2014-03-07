@@ -103,7 +103,7 @@ function getProportionalColor(current, range, minColorSlide, maxColorSlide) {
     //JavaScript only has a Number type
     //If you want to format the number as a string with two digits after the decimal point use:
     var hexResult = d2h(decCol.toFixed(0)); // toFixed(0) => to string with no decimals
-    return (decCol>16)? hexResult: "0" + hexResult; // add a 0 to ensure that we use 2 chacters always
+    return (decCol.toFixed(0)>=16)? hexResult: "0" + hexResult; // add a 0 to ensure that we use 2 chacters always
 }
 
 function updateLegend(data, minColor, maxColor) {
