@@ -27,18 +27,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1615"
-     inkscape:window-height="1026"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
      id="namedview472"
      showgrid="false"
      units="cm"
-     inkscape:zoom="1.6637672"
-     inkscape:cx="895.44336"
-     inkscape:cy="398.98096"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:zoom="0.58823054"
+     inkscape:cx="566.28086"
+     inkscape:cy="491.24552"
+     inkscape:window-x="1358"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1"
-     inkscape:current-layer="poblaciones"
+     inkscape:current-layer="euskadi_map"
      borderlayer="true" />
   <title
      id="title7709">Municipios Comunidad Autonoma Vasca</title>
@@ -16380,11 +16380,12 @@
   </g>
   <g
      transform="translate(0,0.00118614)"
-     style="display:none"
      inkscape:label="poblaciones"
      id="poblaciones"
      inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     class="initially_hidden"
+     style="display:none">
     <path
        id="abanto"
        d="m 289.19333,111.84768 -0.23999,-0.48003 -7.43983,-7.68053 2.39994,-1.4401 0,-4.80033 2.39995,-5.52038 0.71998,0.72005 13.91968,-11.28077 -11.99972,10.56072 0.71998,0.72005 1.43997,-0.96006 -1.43997,1.20008 0.71998,0.24002 2.39995,-0.72005 2.63994,0.96006 6.47985,7.44051 1.43997,0.24002 -0.95998,1.20008 1.91995,-0.48003 4.79989,4.3203 -0.95997,5.76039 3.83991,3.60025 -1.91996,0.24002 -0.47999,0.48003 -0.47999,0.24002 -0.23999,0 -0.24,0.24001 0,0.24002 -0.95997,0.48003 -0.24,0 -0.23999,0 -0.24,-0.24001 0,-0.48004 0,-0.24001 -0.23999,0 -0.47999,-0.48004 -0.71998,-0.24001 -0.71999,-0.24002 -0.23999,0 -0.47999,-0.48003 -0.47999,-0.48004 -0.71998,-0.48003 -0.47999,-0.48003 -0.47999,-0.24002 -0.71998,2.40017 -0.95998,0.48003 -0.95998,0.24002 -0.71998,0.24001 -0.47999,0.24002 -0.47999,0.96006 -0.47999,0.72005 -0.71998,0.24002 -0.47999,0 -0.47999,-0.24002 -0.47999,-0.48003 -0.47999,-0.48003 -0.23999,-0.48003 -0.47999,-0.24002 -0.24,-0.24002 -0.47999,-0.48003 -0.23999,-0.48003 -0.23999,0 -1.19998,-0.72005 -0.47999,-0.48004 -0.95997,-0.96006 -0.47999,-0.72005 0,-0.24002 -0.24,-0.72005"
@@ -19056,11 +19057,12 @@
   </g>
   <g
      transform="translate(0,0.00118614)"
-     style="display:none"
      inkscape:label="poblaciones_labels"
      id="poblaciones_labels"
      inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     class="initially_hidden"
+     style="display:none">
     <text
        transform="scale(0.92831806,1.077217)"
        sodipodi:linespacing="89.999998%"
@@ -22311,8 +22313,9 @@
      inkscape:groupmode="layer"
      id="comarcas"
      inkscape:label="comarcas"
-     style="display:none"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     class="initially_hidden"
+     style="display:none">
     <g
        style="fill:#e6e6e6;stroke:#4d4d4d;stroke-width:0.25;stroke-opacity:1"
        id="g4260"
@@ -22482,11 +22485,12 @@
     </g>
   </g>
   <g
-     style="display:none"
      inkscape:label="comarcas_labels"
      id="comarcas_labels"
      inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     class="initially_hidden"
+     style="display:none">
     <g
        transform="matrix(1.805912,0,0,1.8169542,95.642855,3.3823734)"
        id="g8496"
@@ -22713,11 +22717,12 @@
          style="font-style:normal;-inkscape-font-specification:Arial">Markina-Ondarroa</tspan></text>
   </g>
   <g
-     style="display:none"
      inkscape:label="provincias"
      id="provincias"
      inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     class="initially_hidden"
+     style="display:none">
     <g
        transform="matrix(1.805912,0,0,1.8169542,96.492862,3.8073768)"
        id="g8631"
@@ -22749,8 +22754,9 @@
      inkscape:groupmode="layer"
      id="provincias_labels"
      inkscape:label="provincias_labels"
-     style="display:none"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     class="initially_hidden"
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"

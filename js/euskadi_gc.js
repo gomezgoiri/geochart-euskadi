@@ -1,7 +1,17 @@
 function loadMap(data, options) {
+    // TODO try using load() to avoid requiring any webserver to load the map
+    //   [ref] http://jsfiddle.net/davidbuzatto/zuFsc/
     $.get("images/euskadi.svg", {}, function(img) {
+	var modImg = $(img);
+	
+	// No matter which layers are visible in the current SVG version, we force all the optional layers to hide
+	// Warning: We could simply declare this attribute for the "initially_hidden" class, but the inline "style" declarations would override its default behavior.
+	// Since inkscape manages layers' visibility or invisibility with a "style" attribute, we make sure that the invisibility is applied afterwards.
+	$(".initially_hidden", modImg).css("display", "none");
+	
 	console.log("about to show the svg");
-	$("#svgmap").html(img);
+	$("#svgmap").html(modImg); // TODO It would be better to insert it when all the changes have been made
+				// To do this, we would need to directly modify "img" instead of accessing to $("#elementId")
 	
 	var minColor = "#efe6dc";
 	var maxColor = "#109618";
@@ -34,7 +44,7 @@ function loadMap(data, options) {
 	$(show_id).css("display","block");
 	//$(show_id).css("visibility","visible");
 	if(options.labels) {
-	  $(show_id+"_labels").css("display","block");
+	  $(show_id+"_labels").css("display","block"); // or (inkscape changes to this) inline
 	  //$(show_id+"_labels").css("visibility","visible"); // or "hidden"
 	}
     },"text");
