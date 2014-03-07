@@ -8,13 +8,32 @@ Comparing to GCharts, this project shows more fine-grained information about thi
 Who knows if they will add it in the future or not, but in the meantime we have this.
 
 
-Implemented features:
+Basic Usage
+-----------
+
+First, put the files in a __web server__.
+If you want to quickly check it and you have a GNU/Linux with Python installed, just run _runserver.sh_:
+
+    bash runserver.sh
+
+Then, simply __load__ "sample.html" __in your browser__ (if you have executed _runserver.sh_, go to http://localhost:8000/sample.html).
+You can also customize the example according to your needs __editing__ the _drawRegionsMap_ function in _sample.html_ and refreshing the browser.
+
+Finally, if you want to use it in you own web project, just call to the library as done in the example.
+
+
+Implemented features
+--------------------
+
  * Available resolutions of the map: [municipalities](http://en.wikipedia.org/wiki/Municipality), [comarcas](http://en.wikipedia.org/wiki/Comarca) and [province](http://en.wikipedia.org/wiki/Province).
  * Show labels or not.
  * Shadowing areas according to a [color gradient](http://en.wikipedia.org/wiki/Color_gradient) depending on their values.
  * Customizable color gradient.
  * Tooltips with additional information about the different areas.
 
+
+Screenshots
+-----------
 
 <a href="http://imgur.com/a/gcbK3"><img src="http://i.imgur.com/WDYMoKil.png" title="Province resolution"/></a>
 

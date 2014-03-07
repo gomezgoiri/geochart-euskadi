@@ -1,6 +1,4 @@
 function loadMap(data, options) {
-    // TODO try using load() to avoid requiring any webserver to load the map
-    //   [ref] http://jsfiddle.net/davidbuzatto/zuFsc/
     $.get("images/euskadi.svg", {}, function(img) {
 	// Needed because the changes are not made effective when the "img" is directly changed.
         //  [ref] http://richardmiller.co.uk/2011/03/04/jquery-manipulating-ajax-response-before-inserting-into-the-dom/
