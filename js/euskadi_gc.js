@@ -57,7 +57,7 @@ function loadMap(data, options) {
 }
 
 function getElementId(data, rowNumber) {
-  return "#" + data.getValue(rowNumber, 0).toLowerCase();
+  return "#" + data.getValue(rowNumber, 0).trim().toLowerCase().replace(" ", "_");
 }
 
 function createTooltip(mapContext, ttTextContext, data, rowNumber) {
