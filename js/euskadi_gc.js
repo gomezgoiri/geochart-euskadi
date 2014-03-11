@@ -9,9 +9,6 @@ function loadMap(data, options) {
 	// Since inkscape manages layers' visibility or invisibility with a "style" attribute, we make sure that the invisibility is applied afterwards.
 	$(".initially_hidden", modImg).css("display", "none");
 	
-	
-
-	
 	var minColor = "#efe6dc";
 	var maxColor = "#109618";
 	if ("colorAxis" in options && "colors" in options.colorAxis) {
@@ -94,15 +91,18 @@ function getTooltipText(data, rowNumber) {
 function setBackgroundColors(context, data, rowNumber, minColor, maxColor) {
     var col = "#" + getProportionalRGBs( data.getValue(rowNumber, 1), data.getColumnRange(1), minColor , maxColor );
     var idreg = getElementId(data, rowNumber);
-    $(idreg, context).css("fill", col); // e.g.: $("#bilbao").css("fill","#ff3333");
+    if ( $(idreg, context).is( "path" ) ) {
+      $(idreg, context).css("fill", col); // e.g.: $("#bilbao").css("fill","#ff3333");
+    } else { // it must be a group: if( $(idreg, context).is( "g" ))
+      $(idreg, context).children("path").css("fill", col);
+    }
 }
 
 function getProportionalRGBs(current, range, minColor, maxColor) {
     var r = getProportionalColor(current, range, minColor.substring(1,3), maxColor.substring(1,3));
     var g = getProportionalColor(current, range, minColor.substring(3,5), maxColor.substring(3,5));
     var b = getProportionalColor(current, range, minColor.substring(5,7), maxColor.substring(5,7));
-    console.log(r + g + b);
-    console.log(r + " " + g + " " + b);
+    //console.log(r + g + b);
     return r + g + b;
 }
 
